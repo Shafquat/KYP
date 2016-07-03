@@ -1,13 +1,9 @@
 class TeamsController < ApplicationController
-  def index
-  end
-
-  def edit
-  end
-
-  def new
-  end
-
-  def show
-  end
+    def index
+        @teams = Team.all
+    end
+    
+    def show
+        @team = Team.find(params[:id])
+    end
 end

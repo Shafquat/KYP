@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
-  get 'teams/index'
 
-  get 'teams/edit'
-
-  get 'teams/new'
-
-  get 'teams/show'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get "home/index"
+  get 'teams/index'
     resources :players
     resources :teams
   # The priority is based upon order of creation: first created -> highest priority.
@@ -66,5 +60,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root "home#index"
+  root "teams#index"
 end

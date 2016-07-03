@@ -1,2 +1,7 @@
-<h1>Teams#show</h1>
-<p>Find me in app/views/teams/show.html.erb</p>
+<h3><%= @team.name %></h3>
+
+<% @team.players.each do |player| %>
+    <h3><%= link_to(player.name, player) %></h3>
+<% end %>
+
+<p><%= link_to("Back", root_path) %></p>

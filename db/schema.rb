@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160703154944) do
 
   create_table "players", force: :cascade do |t|
     t.string   "name"
-    t.string   "team"
     t.integer  "team_id"
     t.string   "FAdate"
     t.string   "optiondate"
@@ -103,7 +102,6 @@ ActiveRecord::Schema.define(version: 20160703154944) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"
-    t.integer  "caphit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

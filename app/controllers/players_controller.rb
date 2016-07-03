@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
     def index
-        @team = "Pelicans"
+        @players = Player.all
     end
     
     def new
@@ -20,7 +20,7 @@ class PlayersController < ApplicationController
     end
     
     def show
-        
+        @player = Player.find(params[:id])
     end
     
     def destroy

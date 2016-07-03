@@ -27,6 +27,9 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
+  
+  # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
+  config.assets.precompile += %w( active_admin.css active_admin.js)
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -76,7 +79,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
-  # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
-  config.assets.precompile += ['active_admin.css', 'active_admin/print.css', 'active_admin.js']
 end

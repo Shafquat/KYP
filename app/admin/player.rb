@@ -1,17 +1,6 @@
 ActiveAdmin.register Player do
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+permit_params :name, :team_id, :FAdate, :optiondate, :FAS, :"2016-2017", :"2017-2018", :"2018-2019", :"2019-2020", :"2020-2021", :"2021-2022", :"2022-2023", :"2023-2024", :"2024-2025", :"2025-2026", :"2026-2027", :"2027-2028"
 
 
 end

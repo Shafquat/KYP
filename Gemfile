@@ -44,6 +44,8 @@ end
 # Shafquat's gems
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'searchkick', '~> 1.3'
 
 # Postgres for Heroku
 group :production do

@@ -28,11 +28,14 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
   
-  # Precompile additional assets. Defaults to [application.js, application.css, non-JS/CSS]
-  config.assets.precompile += %w( active_admin.css active_admin.js)
+    # Disable application initialize on precompile (heroku faq: fixes database access error on precompile)
+    config.assets.initialize_on_precompile = false
+    
+    # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
+    config.assets.precompile += %w( active_admin.css active_admin/print.css active_admin.js )
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.

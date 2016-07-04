@@ -9,7 +9,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :teams
+  resources :teams do
+    collection do
+      get 'search'
+    end
+  end
     
   root "teams#index"
 end
